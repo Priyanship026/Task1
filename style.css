@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .navbar.scrolled {
+    background-color: #ef1c1c;
+    box-shadow: 0 4px 6px rgba(24, 213, 93, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #00ffd5;
+    border-bottom: 2px solid #00ffd5;
+  }
+  
+  /* Sections */
+  .section {
+    min-height: 100vh;
+    padding: 100px 40px;
+    background-color: #f9f9f9;
+  }
+  
+  .home-section {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .features-section,
+  .about-section,
+  .contact-section {
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background-color: #1e1e1e;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      display: none;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  }
+  
